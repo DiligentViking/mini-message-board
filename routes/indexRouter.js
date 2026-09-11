@@ -15,7 +15,7 @@ const messages = [
 ];
 
 indexRouter.get('/', (req, res) => {
-  res.send('Hello, world');
+  res.render('index', { title: 'Message Aegis', messages });
 });
 
 // TODO: '/new'

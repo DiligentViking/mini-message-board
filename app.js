@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+app.set('views', './views'); // may need to use __dir path instead
+app.set('view engine', 'ejs');
+
 const indexRouter = require('./routes/indexRouter');
 
 app.use('/', indexRouter);
