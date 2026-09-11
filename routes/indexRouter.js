@@ -22,4 +22,14 @@ indexRouter.get('/new', (req, res) => {
   res.render('newMsg', { title: 'New Message', messages });
 });
 
+indexRouter.post('/new', (req, res) => {
+  messages.push({
+    user: req.body.author,
+    text: req.body.message,
+    added: new Date(),
+  });
+
+  res.redirect('/');
+});
+
 module.exports = indexRouter;
