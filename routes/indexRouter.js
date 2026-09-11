@@ -18,6 +18,13 @@ indexRouter.get('/', (req, res) => {
   res.render('index', { title: 'Message Aegis', messages });
 });
 
+indexRouter.get('/message-:id', (req, res) => {
+  const msgId = req.params.id;
+  const msg = messages[msgId];
+
+  res.render('msg', { title: 'Message Data', msg });
+});
+
 indexRouter.get('/new', (req, res) => {
   res.render('newMsg', { title: 'New Message', messages });
 });
