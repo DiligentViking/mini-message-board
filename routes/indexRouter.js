@@ -18,6 +18,8 @@ indexRouter.get('/', (req, res) => {
   res.render('index', { title: 'Message Aegis', messages });
 });
 
-// TODO: '/new'
+indexRouter.get('/new', (req, res) => {
+  res.render('newMsg', { title: 'New Message', messages });
+});
 
 module.exports = indexRouter;

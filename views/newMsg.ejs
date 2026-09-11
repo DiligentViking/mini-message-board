@@ -4,12 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><% title %></title>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/newMsg.css">
 </head>
 
 <body>
-  <h1><% title %></h1>
+  <h1><%= title %></h1>
 
+  <form method="POST" action="/new">
+    <div>
+      <label for="author">Author</label>
+      <input type="text" id="author">
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea name="message" id="message"></textarea>
+    </div>
+    <button>Submit</button>
+  </form>
 </body>
 
 </html>
