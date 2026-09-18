@@ -13,7 +13,7 @@
   <ul>
     <% messages.forEach((m, i) => { %>
     <li>
-      <div><%= m.user %></div>
+      <div><%= m.author %></div>
       <div><%= m.text %></div>
       <div><%= m.added.toLocaleString() %></div>
       <a href=<%= `./message-${i}` %>>Open <%= i %></a>

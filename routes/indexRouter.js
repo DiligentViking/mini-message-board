@@ -1,15 +1,18 @@
+// RENAME USER TO AUTHOR!
+// CONTINUE: Set up database stuff in this project (use "using-postgresql" proj for reference)
+
 const { Router } = require('express');
 const indexRouter = Router();
 
 const messages = [
   {
     text: 'Hi there!',
-    user: 'Amando',
+    author: 'Amando',
     added: new Date(),
   },
   {
     text: 'Hello World!',
-    user: 'Charles',
+    author: 'Charles',
     added: new Date(),
   },
 ];
@@ -31,7 +34,7 @@ indexRouter.get('/new', (req, res) => {
 
 indexRouter.post('/new', (req, res) => {
   messages.push({
-    user: req.body.author,
+    author: req.body.author,
     text: req.body.message,
     added: new Date(),
   });
