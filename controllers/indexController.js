@@ -1,3 +1,5 @@
+const queries = require('../db/queries');
+
 const messages = [
   {
     text: 'Hi there!',
@@ -11,7 +13,10 @@ const messages = [
   },
 ];
 
-exports.messageList = (req, res) => {
+// Read
+
+exports.messageList = async (req, res) => {
+  const messages = await queries.getAllMessages();
   res.render('index', { title: 'Message Aegis', messages });
 };
 
@@ -21,6 +26,8 @@ exports.messageDetails = (req, res) => {
 
   res.render('msg', { title: 'Message Data', msg });
 };
+
+// Create
 
 exports.messageNewGet = (req, res) => {
   res.render('newMsg', { title: 'New Message', messages });
