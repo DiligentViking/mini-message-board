@@ -20,3 +20,14 @@ exports.getMessage = async (id) => {
 
   return rows[0];
 };
+
+// Create
+
+exports.insertMessage = async (author, text) => {
+  const sql = `
+    INSERT INTO messages (author, text)
+    VALUES ($1, $2);
+  `;
+  console.log('text', text);
+  await pool.query(sql, [author, text]);
+};

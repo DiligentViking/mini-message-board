@@ -7,7 +7,7 @@ indexRouter.get('/', indexController.messageList);
 
 indexRouter.get('/message-:id', indexController.messageDetails);
 
-// indexRouter.get('/new', indexController.messageNewGet);
-// indexRouter.post('/new', indexController.messageNewPost);
+indexRouter.get('/new', indexController.messageNewGet);
+indexRouter.post('/new', indexController.messageNewPost);
 
 module.exports = indexRouter;
