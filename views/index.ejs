@@ -11,12 +11,12 @@
   <h1><%= title %></h1>
 
   <ul>
-    <% messages.forEach((m, i) => { %>
+    <% messages.forEach((m) => { %>
     <li>
       <div><%= m.author %></div>
       <div><%= m.text %></div>
       <div><%= m.added.toLocaleString() %></div>
-      <a href=<%= `./message-${i}` %>>Open <%= i %></a>
+      <a href=<%= `./message-${m.id}` %>>Open <%= m.id %></a>
     </li>
     <br>
     <% }) %>
