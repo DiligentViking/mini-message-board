@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 
-process.loadEnvFile();
-
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
