@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node --watch --env-file=dev.env app.js"
+    "start": "node --watch app.js",
+    "dev": "node --watch --env-file=dev.env app.js"
   },
   "repository": {
     "type": "git",
